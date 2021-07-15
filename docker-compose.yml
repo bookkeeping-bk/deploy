@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  bookkeeping_api:
+    image: registry.cn-chengdu.aliyuncs.com/bookkeeping-01/api:v1.0.1
+    container_name: bookkeeping_api
+    restart: always
+    ports:
+      - 1024:1024
+
+  bookkeeping_app:
+    image: registry.cn-chengdu.aliyuncs.com/bookkeeping-01/app:v1.0.0
+    container_name: bookkeeping_app
+    restart: always
+    ports:
+      - 2048:80
